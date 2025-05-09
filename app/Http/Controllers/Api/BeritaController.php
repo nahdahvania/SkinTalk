@@ -10,7 +10,7 @@ use App\Models\Category;
 
 class BeritaController extends Controller
 {
-    // Ambil semua berita dengan relasi author & category
+    
     public function index()
     {
         $beritas = Berita::with(['author', 'category'])->get();
@@ -21,7 +21,7 @@ class BeritaController extends Controller
         ]);
     }
 
-    // Ambil detail berita berdasarkan ID
+   
     public function show($id)
     {
         $berita = Berita::with(['author', 'category'])->find($id);
@@ -38,7 +38,7 @@ class BeritaController extends Controller
         ]);
     }
 
-    // Ambil berita berdasarkan kategori (nama kategori)
+    
     public function byCategory($categoryName)
     {
         $beritas = Berita::whereHas('category', function ($query) use ($categoryName) {

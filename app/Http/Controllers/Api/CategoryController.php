@@ -9,7 +9,7 @@ class CategoryController extends Controller
 {
     public function index()
     {
-        // Ambil semua kategori dengan id, name, slug (buat navbar)
+        
         return Category::select('id', 'name', 'slug')->get();
     }
 }
