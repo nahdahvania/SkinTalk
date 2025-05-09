@@ -13,4 +13,4 @@ Route::get('/authors', [AuthorController::class, 'index']);
 
 Route::get('/berita', [BeritaController::class, 'index']);
 Route::get('/berita/{id}', [BeritaController::class, 'show']);
-Route::get('/berita/category/{categoryName}', [BeritaController::class, 'byCategory']); // ← Tambahan ini
+Route::get('/berita/category/{categoryName}', [BeritaController::class, 'byCategory']); 

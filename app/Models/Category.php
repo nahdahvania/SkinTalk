@@ -28,4 +28,9 @@ class Category extends Model
     {
         return $this->hasMany(ArticleNews::class);
     }
+
+    public function articleNews()
+    {
+        return $this->hasMany(ArticleNews::class, 'category_id');
+    }
 }
