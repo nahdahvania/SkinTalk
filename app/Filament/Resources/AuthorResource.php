@@ -46,8 +46,8 @@ class AuthorResource extends Resource
             ->columns([
                 ImageColumn::make('avatar')
                     ->circular()
-                    ->disk('public') // Sesuai konfigurasi storage
-                    ->url(fn ($record) => asset('storage/' . $record->avatar)), // Tambahkan asset storage
+                    ->disk('public') 
+                    ->url(fn ($record) => asset('storage/' . $record->avatar)),
                 TextColumn::make('name')->sortable()->searchable(),
                 TextColumn::make('occupation'),
                 TextColumn::make('slug')->copyable(),
